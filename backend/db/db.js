@@ -1,5 +1,5 @@
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
+require('dotenv');
 const mongoose = require('mongoose');
 
 async function connectDB() {
