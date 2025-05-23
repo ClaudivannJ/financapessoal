@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #1f2937;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 40px;
+  flex-grow: 1;
+}
+
+.left {
+  max-width: 45%;
+}
+
+.left h1 {
+  font-size: 32px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.left p {
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 30px;
+}
+
+.start-button {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.right .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 340px;
+}
+
+.saldo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.receitas-despesas {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.receita span {
+  color: green;
+  font-weight: 500;
+}
+
+.despesa span {
+  color: red;
+  font-weight: 500;
+}
+
+.grafico {
+  margin-bottom: 20px;
+}
+
+.barras {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 100px;
+}
+
+.barra {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.altura {
+  width: 16px;
+  background-color: #3b82f6;
+  margin-bottom: 4px;
+}
+
+.transacoes {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 10px;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.bolinha {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.verde {
+  background-color: green;
+}
+
+.vermelha {
+  background-color: red;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #6b7280;
+}
