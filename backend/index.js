@@ -1,19 +1,20 @@
-const connectDB = require('./db/db');
-const User = require('./models/User');
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
 
-(async () => {
-    try {
-        await connectDB();
-        console.log('MongoDB conectado com sucesso!');
+const connectDB = require("./services/db");
 
-        const testUser = new User({
-            nome: 'Teste Conexão',
-            email: `teste_${Date.now()}@example.com`,
-            senhaHash: 'teste1234',
-        });
-        await testUser.save();
-        console.log('Documento de teste criado:', testUser);
-    } catch (err) {
-        console.error('Erro durante o teste:', err.message);
-    }
-})();
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Rotas
+app.use("/auth", require("./routes/auth.routes"));
+app.use("/transactions", require("./routes/transaction.routes"));
+
+// Iniciar servidor
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  connectDB();
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
