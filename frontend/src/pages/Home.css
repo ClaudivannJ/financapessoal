@@ -1,159 +1,219 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff;
-  color: #1f2937;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.home-container {
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #0f172a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* Container principal */
+.dashboard-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.navbar {
+/* Header */
+header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
-  font-weight: bold;
-}
-
-.nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #1f2937;
+header nav a {
+  margin-right: 2rem;
   font-weight: 500;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+header nav a:last-child {
+  margin-right: 0;
 }
 
-.main-content {
+header nav a:hover {
+  color: #2563eb;
+}
+
+header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Conteúdo principal */
+main.conteudo {
+  flex: 1;
   display: flex;
   justify-content: space-between;
-  padding: 60px 40px;
-  flex-grow: 1;
+  align-items: flex-start;
+  padding: 4rem;
+  gap: 3rem;
 }
 
-.left {
-  max-width: 45%;
+/* Intro */
+.intro {
+  max-width: 600px;
 }
 
-.left h1 {
-  font-size: 32px;
-  color: #1e3a8a;
-  margin-bottom: 20px;
+.intro h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.left p {
-  font-size: 18px;
-  color: #4b5563;
-  margin-bottom: 30px;
+.intro p {
+  color: #475569;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
-.start-button {
-  background: #3b82f6;
+.intro button {
+  background-color: #2563eb;
   color: white;
-  padding: 12px 24px;
+  padding: 0.9rem 2rem;
   border-radius: 8px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
-.right .card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 340px;
+.intro button:hover {
+  background-color: #1d4ed8;
 }
 
-.saldo {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0;
+/* Painel lateral */
+.painel {
+  background-color: #f9fafb;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 380px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.receitas-despesas {
+.painel h4 {
+  margin-bottom: 1rem;
+}
+
+.box-saldo {
+  margin-bottom: 1.5rem;
+}
+
+.box-saldo h3 {
+  font-size: 1rem;
+  color: #334155;
+}
+
+.box-saldo .valor {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.box-resumo {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.receita span {
-  color: green;
-  font-weight: 500;
+.box-resumo p {
+  background-color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
 }
 
-.despesa span {
-  color: red;
-  font-weight: 500;
+.box-resumo .receita {
+  color: #16a34a;
 }
 
-.grafico {
-  margin-bottom: 20px;
+.box-resumo .despesa {
+  color: #dc2626;
 }
 
-.barras {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  height: 100px;
+.box-grafico {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.barra {
-  text-align: center;
-  font-size: 12px;
-  color: #6b7280;
+.box-transacoes {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
-.altura {
-  width: 16px;
-  background-color: #3b82f6;
-  margin-bottom: 4px;
+.box-transacoes ul {
+  list-style: none;
 }
 
-.transacoes {
-  border-top: 1px solid #e5e7eb;
-  padding-top: 10px;
-}
-
-.linha {
+.box-transacoes li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
 }
 
-.bolinha {
+.box-transacoes span {
+  display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 6px;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
 }
 
-.verde {
-  background-color: green;
+.bolinha-verde {
+  background-color: #16a34a;
 }
 
-.vermelha {
-  background-color: red;
+.bolinha-vermelha {
+  background-color: #dc2626;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  border-top: 1px solid #e5e7eb;
-  font-size: 14px;
-  color: #6b7280;
+.box-transacoes small {
+  color: #64748b;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  main.conteudo {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .painel {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .intro {
+    text-align: center;
+  }
 }
