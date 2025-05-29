@@ -13,7 +13,7 @@ function App() {
         <Route path="/cadastro" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/transacoes" element={<Transactions />} />
-        <Route path="/nova" element={<NewTransaction />} />
+        <Route path="/nova-transacao" element={<NewTransaction />} />
       </Routes>
     </BrowserRouter>
   );

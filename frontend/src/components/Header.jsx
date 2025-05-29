@@ -14,7 +14,7 @@ export default function Header() {
       <nav>
         <Link to="/home">Home</Link>
         <Link to="/transacoes">Transações</Link>
-        <Link to="/nova">Nova</Link>
+        <Link to="/nova-transacao">Nova</Link>
         <button onClick={logout}>Sair</button>
       </nav>
     </header>

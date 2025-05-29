@@ -14,20 +14,42 @@ export default function Register() {
     try {
       await api.post("/auth/register", { nome, email, senha });
       navigate("/");
-    } catch(error) {
+    } catch (error) {
       console.log(error.response?.data || error.message);
       alert("Erro no cadastro");
     }
   }
 
   return (
-    <form onSubmit={handleRegister}>
-      <h2>Cadastro</h2>
-      <input placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
-      <input placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
-      <input placeholder="Senha" type="password" value={senha} onChange={e => setSenha(e.target.value)} />
-      <button>Cadastrar</button>
-      <p>Já tem conta? <Link to="/">Faça login</Link></p>
-    </form>
+    <div className="auth-container">
+      <div className="auth-card">
+        <h1>Cadastro</h1>
+        <form onSubmit={handleRegister}>
+          <input
+            placeholder="Nome"
+            value={nome}
+            onChange={e => setNome(e.target.value)}
+            required
+          />
+          <input
+            placeholder="E-mail"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+          />
+          <input
+            placeholder="Senha"
+            type="password"
+            value={senha}
+            onChange={e => setSenha(e.target.value)}
+            required
+          />
+          <button>Cadastrar</button>
+        </form>
+        <p>
+          Já tem conta? <Link to="/">Faça login</Link>
+        </p>
+      </div>
+    </div>
   );
 }
