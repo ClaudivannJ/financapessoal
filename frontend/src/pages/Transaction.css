@@ -1,0 +1,67 @@
+/* Transações */
+.transacoes-container {
+    padding: 4rem;
+    min-height: 100vh;
+    background-color: #f9fafb;
+  }
+  
+  .transacoes-container h1 {
+    margin-bottom: 2rem;
+  }
+  
+  .tabela-transacoes {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .tabela-transacoes th,
+  .tabela-transacoes td {
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .tabela-transacoes th {
+    background-color: #f1f5f9;
+    color: #334155;
+  }
+  
+  .tabela-transacoes tr:not(:last-child) {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .tabela-transacoes tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  .bolinha-verde {
+    background-color: #16a34a;
+  }
+  
+  .bolinha-vermelha {
+    background-color: #dc2626;
+  }
+  
+  .transacoes-container .botao-nova {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .transacoes-container .botao-nova:hover {
+    background-color: #1d4ed8;
+  }
+  
+  @media (max-width: 900px) {
+    .transacoes-container {
+      padding: 2rem;
+    }
+  }
+  

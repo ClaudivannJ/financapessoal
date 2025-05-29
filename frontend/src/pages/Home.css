@@ -1,0 +1,219 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #0f172a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* Container principal */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+header nav a {
+  margin-right: 2rem;
+  font-weight: 500;
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+header nav a:hover {
+  color: #2563eb;
+}
+
+header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Conteúdo principal */
+main.conteudo {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem;
+  gap: 3rem;
+}
+
+/* Intro */
+.intro {
+  max-width: 600px;
+}
+
+.intro h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  color: #475569;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.intro button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.intro button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Painel lateral */
+.painel {
+  background-color: #f9fafb;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 380px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.painel h4 {
+  margin-bottom: 1rem;
+}
+
+.box-saldo {
+  margin-bottom: 1.5rem;
+}
+
+.box-saldo h3 {
+  font-size: 1rem;
+  color: #334155;
+}
+
+.box-saldo .valor {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.box-resumo {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.box-resumo p {
+  background-color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.box-resumo .receita {
+  color: #16a34a;
+}
+
+.box-resumo .despesa {
+  color: #dc2626;
+}
+
+.box-grafico {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.box-transacoes {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.box-transacoes ul {
+  list-style: none;
+}
+
+.box-transacoes li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.box-transacoes span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+}
+
+.bolinha-verde {
+  background-color: #16a34a;
+}
+
+.bolinha-vermelha {
+  background-color: #dc2626;
+}
+
+.box-transacoes small {
+  color: #64748b;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  main.conteudo {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .painel {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .intro {
+    text-align: center;
+  }
+}
