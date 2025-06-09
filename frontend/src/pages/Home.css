@@ -9,6 +9,7 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #fff;
   color: #0f172a;
+  line-height: 1.5;
 }
 
 a {
@@ -19,6 +20,7 @@ a {
 button {
   cursor: pointer;
   border: none;
+  font-family: inherit;
 }
 
 /* Container principal */
@@ -26,87 +28,121 @@ button {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 80vw;
+  float: left;
 }
 
 /* Header */
 header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 1rem;
   background-color: white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  gap: 1rem;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 header nav a {
-  margin-right: 2rem;
+  padding: 0.5rem;
   font-weight: 500;
+  transition: color 0.2s;
 }
 
-header nav a:last-child {
-  margin-right: 0;
+header nav button {
+  background: none;
+  padding: 0.5rem;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav button:hover {
   color: #2563eb;
-}
-
-header h1 {
-  font-size: 1rem;
-  font-weight: 600;
 }
 
 /* Conteúdo principal */
 main.conteudo {
   flex: 1;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 4rem;
-  gap: 3rem;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Intro */
 .intro {
-  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .intro h1 {
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .intro p {
   color: #475569;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botoes-acao {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .intro button {
   background-color: #2563eb;
   color: white;
-  padding: 0.9rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-weight: 500;
   transition: background-color 0.2s;
+  font-size: 1rem;
+  min-width: 150px;
 }
 
 .intro button:hover {
   background-color: #1d4ed8;
 }
 
-/* Painel lateral */
+/* Painel */
 .painel {
   background-color: #f9fafb;
   border-radius: 20px;
-  padding: 2rem;
-  width: 380px;
+  padding: 1.5rem;
+  width: 100%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .painel h4 {
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .box-saldo {
@@ -119,23 +155,25 @@ main.conteudo {
 }
 
 .box-saldo .valor {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-top: 0.4rem;
 }
 
 .box-resumo {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .box-resumo p {
   background-color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 8px;
   font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .box-resumo .receita {
@@ -151,12 +189,17 @@ main.conteudo {
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  min-height: 250px;
 }
 
 .box-transacoes {
   background-color: white;
   border-radius: 12px;
   padding: 1rem;
+}
+
+.box-transacoes h4 {
+  margin-bottom: 1rem;
 }
 
 .box-transacoes ul {
@@ -166,9 +209,14 @@ main.conteudo {
 .box-transacoes li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 0.5rem 0;
+}
+
+.box-transacoes li:last-child {
+  border-bottom: none;
 }
 
 .box-transacoes span {
@@ -177,6 +225,7 @@ main.conteudo {
   height: 10px;
   border-radius: 9999px;
   margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .bolinha-verde {
@@ -189,31 +238,89 @@ main.conteudo {
 
 .box-transacoes small {
   color: #64748b;
+  font-size: 0.8rem;
   margin-left: auto;
-  margin-right: 1rem;
+}
+
+.box-transacoes strong {
+  font-weight: 600;
+  width: 100%;
+  text-align: right;
+  margin-top: 0.25rem;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   color: #64748b;
   border-top: 1px solid #e2e8f0;
+  font-size: 0.9rem;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
-  main.conteudo {
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+/* Media Queries para telas maiores */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
   }
 
-  .painel {
-    width: 100%;
-    max-width: 500px;
+  header nav {
+    gap: 1.5rem;
+  }
+
+  main.conteudo {
+    padding: 3rem 2rem;
   }
 
   .intro {
-    text-align: center;
+    text-align: left;
+    max-width: none;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro p {
+    text-align: left;
+  }
+
+  .botoes-acao {
+    justify-content: flex-start;
+  }
+
+  .box-resumo {
+    flex-direction: row;
+  }
+
+  .box-resumo p {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.conteudo {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3rem;
+  }
+
+  .intro {
+    flex: 1;
+    padding-right: 3rem;
+    max-width: 600px;
+  }
+
+  .painel {
+    width: 380px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 2rem;
+  }
+
+  .box-transacoes strong {
+    width: auto;
+    margin-top: 0;
   }
 }

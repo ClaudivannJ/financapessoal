@@ -20,7 +20,7 @@ export default function NewTransaction() {
         valor: Number(valor),
         categoria,
         descricao,
-        data,
+        data: new Date(data + 'T00:00:00').toISOString(),
       });
       navigate("/transacoes");
     } catch {
@@ -46,12 +46,17 @@ export default function NewTransaction() {
               onChange={e => setValor(e.target.value)}
               required
             />
-            <input
-              placeholder="Categoria"
-              value={categoria}
-              onChange={e => setCategoria(e.target.value)}
-              required
-            />
+            <select value={categoria} onChange={e => setCategoria(e.target.value)} required>
+  <option value="">Selecione uma categoria</option>
+  <option value="Salário">Salário</option>
+  <option value="Aluguel">Aluguel</option>
+  <option value="Alimentação">Alimentação</option>
+  <option value="Transporte">Transporte</option>
+  <option value="Educação">Educação</option>
+  <option value="Lazer">Lazer</option>
+  <option value="Outros">Outros</option>
+</select>
+
             <input
               placeholder="Descrição"
               value={descricao}

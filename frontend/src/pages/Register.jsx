@@ -47,7 +47,7 @@ export default function Register() {
           <button>Cadastrar</button>
         </form>
         <p>
-          Já tem conta? <Link to="/">Faça login</Link>
+          Já tem conta? <Link to="/login">Faça login</Link>
         </p>
       </div>
     </div>
