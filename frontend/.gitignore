@@ -7,12 +7,30 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependências e builds
+node_modules/
+dist/
+dist-ssr/
 *.local
+.cache/
+.temp/
+.tmp/
+*.tmp
+*.bak
+*.swp
+*.pid
+*.seed
+*.pid.lock
 
-# Editor directories and files
+# Configurações de ambiente
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# Editor/IDE
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +40,31 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Testes e cobertura
+coverage/
+.nyc_output/
+test-results/
+
+# Sistema
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Pacotes
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Framework específico (se necessário)
+.next/       # Next.js
+.nuxt/       # Nuxt.js
+.cache/      # Parcel, Gatsby
+.out/        # Svelte
+.svelte-kit/ # SvelteKit
