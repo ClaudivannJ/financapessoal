@@ -5,7 +5,11 @@ require("dotenv").config();
 const connectDB = require("./services/db.js");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://financapessoal.vanntech.com.br',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Rotas
