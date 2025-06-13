@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import api from "../services/api";
-import Header from "../components/Header";
+import api from "../services/api.js";
+import Header from "../components/Header.jsx";
 import { Link } from "react-router-dom";
 import "./Transaction.css";
 

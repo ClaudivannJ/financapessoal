@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Home from "./pages/Home";
-import Transactions from "./pages/Transactions";
-import NewTransaction from "./pages/NewTransaction";
-import Termos from "./pages/Footer/Termos";
-import Privacidade from "./pages/Footer/Privacidade";
-import Faq from "./pages/Footer/Faq";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import Home from "./pages/Home.jsx";
+import Transactions from "./pages/Transactions.jsx";
+import NewTransaction from "./pages/NewTransaction.jsx";
+import Termos from "./pages/Footer/Termos.jsx";
+import Privacidade from "./pages/Footer/Privacidade.jsx";
+import Faq from "./pages/Footer/Faq.jsx";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import api from "../services/api";
-import Header from "../components/Header";
+import api from "../services/api.js";
+import Header from "../components/Header.jsx";
 import "./NewTransaction.css";
 
 export default function NewTransaction() {

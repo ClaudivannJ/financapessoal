@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import api from "../services/api";
+import api from "../services/api.js";
 import "./Home.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer/Footer";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
